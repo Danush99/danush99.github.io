@@ -3,11 +3,43 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+import projects from './projects.js';
 
 (function($) {
-
 	var	$window = $(window),
 		$body = $('body');
+
+
+	//Projects
+	// Reference to the container where sections will be added
+	const projectsContainer = document.getElementById('projectsContainer');
+	// Loop through the projects array and create sections dynamically
+	projects.forEach((project, index) => {
+		const section = document.createElement('section');
+		section.classList.add('spotlight', index % 2 === 0 ? 'style1' : 'style2', index % 2 === 0 ? 'left' : 'right');
+	
+		// Create the content for the section
+		const content = `
+		<span class="image fit main"><img src="${project.imageSrc}" alt="" /></span>
+		<div class="content">
+			<header>
+			<h2>${project.title}</h2>
+			<p>${project.description}</p>
+			</header>
+			<p>${project.description}</p>
+			<ul class="actions">
+			<li><a href="#" class="button">Learn More</a></li>
+			</ul>
+		</div>
+		<a href="#banner" class="goto-next scrolly">Next</a>
+		`;
+	
+		// Set the content inside the section
+		section.innerHTML = content;
+	
+		// Append the section to the container
+		projectsContainer.appendChild(section);
+	});
 
 	// Breakpoints.
 		breakpoints({
@@ -246,5 +278,4 @@
 
 		$banner
 			._parallax();
-
 })(jQuery);
