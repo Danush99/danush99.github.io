@@ -14,13 +14,17 @@ import projects from './projects.js';
 	// Reference to the container where sections will be added
 	const projectsContainer = document.getElementById('projectsContainer');
 	// Loop through the projects array and create sections dynamically
-	projects.forEach((project, index) => {
+	projects.forEach((project, listIndex) => {
+		const index = listIndex + 1
 		const section = document.createElement('section');
-		section.classList.add('spotlight', index % 2 === 0 ? 'style1' : 'style2', index % 2 === 0 ? 'left' : 'right');
+		section.setAttribute('id', (index));
+		const styleType = `style${index}`
+		section.classList.add('spotlight', styleType, index % 2 === 0 ? 'right' : 'left');
 	
 		// Create the content for the section
+		const imgClass = index % 2 === 0 ? '' : 'bottom'
 		const content = `
-		<span class="image fit main"><img src="${project.imageSrc}" alt="" /></span>
+		<span class="image fit main ${imgClass}"><img src="${project.imageSrc}" alt="" /></span>
 		<div class="content">
 			<header>
 			<h2>${project.title}</h2>
@@ -31,7 +35,7 @@ import projects from './projects.js';
 			<li><a href="#" class="button">Learn More</a></li>
 			</ul>
 		</div>
-		<a href="#banner" class="goto-next scrolly">Next</a>
+		<a href="#${index+1}" class="goto-next scrolly">Next</a>
 		`;
 	
 		// Set the content inside the section
