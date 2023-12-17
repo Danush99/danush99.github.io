@@ -2546,8 +2546,12 @@ input, select, textarea {
 			top: 0.25em;
 		}
 
-		.image.left, .image.right {
-			max-width: 40%;
+		.image.left{
+			max-width: 30%;
+		}
+
+		.image.right {
+			max-width: 15%;
 		}
 
 			.image.left img, .image.right img {
@@ -3341,6 +3345,15 @@ input, select, textarea {
 			/* Example styles: */
 			width: 83px; /* Set width for SVG */
 		}
+
+		.internImg img {
+			width: 50px; /* Set the desired width */
+			height: 50px; /* To maintain aspect ratio */
+			/* If you want to specify both width and height, you can use:
+			   width: 200px;
+			   height: 150px; 
+			   Replace the values with your preferred dimensions */
+		  }
 
 /* Dropotron */
 

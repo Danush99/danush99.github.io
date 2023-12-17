@@ -14,6 +14,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+		</script>
+		<script type="text/javascript">
+		(function(){
+			emailjs.init("pfTuqDrrYA7rUyl0S");
+		})();
+		</script>
+
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -24,7 +34,7 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="index.html#one">Work</a></li>
+						<li><a href="index.html#projectsContainer">Work</a></li>
 						<li><a href="Contact.html">Contact</a></li>
 					</ul>
 				</nav>
@@ -35,51 +45,25 @@
 					<div class="container">
 						<header class="major">
 							<h2>Contact me</h2>
-							<p>Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan</p>
+							<p>Innovative Solutions, Open for Exciting Job Offers. Let's Talk!</p>
 						</header>
 
 						<!-- Form -->
 							<section>
 								<h3>Form</h3>
-								<form method="post" action="#">
+								<form id="contactForm" method="post" action="#">
 									<div class="row gtr-uniform gtr-50">
 										<div class="col-6 col-12-xsmall">
-											<input type="text" name="name" id="name" value="" placeholder="Name" />
+											<input type="text" name="name" id="name" value="" placeholder="Your Name" required />
 										</div>
 										<div class="col-6 col-12-xsmall">
-											<input type="email" name="email" id="email" value="" placeholder="Email" />
+											<input type="email" name="email" id="email" value="" placeholder="Your Email Address" required />
 										</div>
 										<div class="col-12">
-											<select name="category" id="category">
-												<option value="">- Category -</option>
-												<option value="1">Manufacturing</option>
-												<option value="1">Shipping</option>
-												<option value="1">Administration</option>
-												<option value="1">Human Resources</option>
-											</select>
-										</div>
-										<div class="col-4 col-12-medium">
-											<input type="radio" id="priority-low" name="priority" checked>
-											<label for="priority-low">Low Priority</label>
-										</div>
-										<div class="col-4 col-12-medium">
-											<input type="radio" id="priority-normal" name="priority">
-											<label for="priority-normal">Normal Priority</label>
-										</div>
-										<div class="col-4 col-12-medium">
-											<input type="radio" id="priority-high" name="priority">
-											<label for="priority-high">High Priority</label>
-										</div>
-										<div class="col-6 col-12-medium">
-											<input type="checkbox" id="copy" name="copy">
-											<label for="copy">Email me a copy of this message</label>
-										</div>
-										<div class="col-6 col-12-medium">
-											<input type="checkbox" id="human" name="human" checked>
-											<label for="human">I am a human and not a robot</label>
+											<input type="text" name="title" id="title" value="" placeholder="Title" required />
 										</div>
 										<div class="col-12">
-											<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+											<textarea name="message" id="message" placeholder="Enter your message" rows="6" required ></textarea>
 										</div>
 										<div class="col-12">
 											<ul class="actions">
@@ -93,9 +77,9 @@
 
 						<!-- Image -->
 							<section>
-								<h4>Left &amp; Right</h4>
-								<p><span class="image left"><img src="images/pic08.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Cras aliquet accumsan curae accumsan arcu amet egestas placerat odio morbi mi adipiscing col morbi felis faucibus in gravida sollicitudin interdum commodo. Ante aliquam vis iaculis accumsan lorem ipsum dolor sit amet nullam. Cras aliquet accumsan curae accumsan arcu amet egestas placerat odio morbi mi adipiscing col morbi felis faucibus in gravida sollicitudin interdum commodo. Ante aliquam vis iaculis accumsan lorem ipsum dolor sit amet nullam.</p>
-								<p><span class="image right"><img src="images/pic08.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Cras aliquet accumsan curae accumsan arcu amet egestas placerat odio morbi mi adipiscing col morbi felis faucibus in gravida sollicitudin interdum commodo. Ante aliquam vis iaculis accumsan lorem ipsum dolor sit amet nullam. Cras aliquet accumsan curae accumsan arcu amet egestas placerat odio morbi mi adipiscing col morbi felis faucibus in gravida sollicitudin interdum commodo. Ante aliquam vis iaculis accumsan lorem ipsum dolor sit amet nullam.</p>
+								<h4>My Internship Experience</h4>
+								<p><span class="image left"><img src="images/team2.JPEG" alt="" /></span>During my 6-month internship at Eyepax IT Consulting, I worked as a Software Engineer Intern with the Synopsys team. In the initial phase, I focused on building a website for a salon booking system. This project provided me with significant learning experiences, helping me grasp concepts in web development and project management. Following the completion of the salon booking system, I was assigned to the Synopsys team for the subsequent 4 months, working on an ongoing project. This involved creating a workload management system tailored for organizations such as universities. Initially, I resolved issues within the system and gradually progressed to developing front-end features. Over time, I gained valuable experience in backend development, contributing to my comprehensive understanding of full-stack software engineering. Throughout the internship, I had the opportunity to work with various technologies including React Js, TypeScript, Docker, PHP, PostgreSQL, Jira, Spira Plan, Bitbucket, Git Lab, Symfony, and API Platform. These experiences significantly enhanced my technical skill set and understanding of software development methodologies.</p>
+								<p><span class="image right"><img src="images/team1.JPEG" alt="" /></span>My internship was more than just work; it was a fun and welcoming environment. We had enjoyable gatherings, like rooftop kottu and beer parties every month, festive celebrations such as the year-end Christmas party at Galadari Hotel, and the Awurudu festival at Waters Edge Hotel. These events made us feel like a close-knit community. Besides, playing indoor cricket with my Synopsys team every week was a great way to bond and create lasting memories, making my internship experience diverse and enjoyable.</p>
 							</section>
 
 					</div>
@@ -124,6 +108,56 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				document.getElementById('contactForm').addEventListener('submit', function(event) {
+					event.preventDefault(); // Prevent the default form submission
+			
+					document.querySelector('input[type="submit"]').value = 'Sending Message....';
+
+					// Get form values
+					var name = document.getElementById('name').value;
+					var email = document.getElementById('email').value;
+					var title = document.getElementById('title').value;
+					var message = document.getElementById('message').value;
+
+					const formValue = {
+						name : name,
+						email : email,
+						title : title,
+						message : message,
+					}
+			
+					// Log the form values (you can perform any further actions here)
+					console.log('Name:', name);
+					console.log('Email:', email);
+					console.log('Title:', title);
+					console.log('Message:', message);
+
+					const serviceID = "service_7xsbrzt";
+					const templateId = "template_h9r8lkq";
+
+					emailjs.send(serviceID, templateId, formValue)
+						.then((result) => {
+							setTimeout(() => {
+							}, 1000);
+							document.getElementById('name').value = "";
+							document.getElementById('email').value = "";
+							document.getElementById('title').value = "";
+							document.getElementById('message').value = "";
+							document.querySelector('input[type="submit"]').value = 'Send Message'; 
+							alert("Your message sent succesfully !")
+							const res = {success: true, result: result}
+							console.log(res);
+						}, (error) => {
+							document.querySelector('input[type="submit"]').value = 'Send Message'; 
+							alert("Something went wrong try again later !")
+							const res = {success: false, error: error}
+							console.log(res);
+					});
+
+				});
+			</script>
 
 	</body>
 </html>

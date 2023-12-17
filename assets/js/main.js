@@ -5,6 +5,7 @@
 */
 import projects from './projects.js';
 
+
 (function($) {
 	var	$window = $(window),
 		$body = $('body');
@@ -23,6 +24,15 @@ import projects from './projects.js';
 	
 		// Create the content for the section
 		const imgClass = index % 2 === 0 ? '' : 'bottom'
+
+		const techsContent = project.techs.map(tech => `
+			<section class="col-4 col-6-medium col-4-xsmall">
+				<span class="icon">
+					<img src="images/tech/${tech}" alt=""/>
+				</span>
+			</section>`)
+			.join('');
+		
 		const content = `
 		<span class="image fit main ${imgClass}"><img src="${project.imageSrc}" alt="" /></span>
 		<div class="content">
@@ -30,10 +40,10 @@ import projects from './projects.js';
 			<h2>${project.title}</h2>
 			<p>${project.description}</p>
 			</header>
-			<p>${project.description}</p>
-			<ul class="actions">
-			<li><a href="#" class="button">Learn More</a></li>
-			</ul>
+			<p>Technologies: </p>
+			<div class="row gtr-uniform">
+				${techsContent}
+			</div>
 		</div>
 		<a href="#${index+1}" class="goto-next scrolly">Next</a>
 		`;
@@ -44,6 +54,11 @@ import projects from './projects.js';
 		// Append the section to the container
 		projectsContainer.appendChild(section);
 	});
+
+	const sendEmail = (formValue) => {
+		console.log('sending mail....')
+
+    };
 
 	// Breakpoints.
 		breakpoints({

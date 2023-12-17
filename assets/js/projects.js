@@ -1,20 +1,23 @@
 // projects.js
 const projects = [
 	{
-		"title": "Project 1",
+		"title": "Sri-Doc",
 		"imageSrc": "images/picBio.png",
-		"description": "Description for Project 1"
+		"description": "A comprehensive framework for extracting information from Sinhala documents such as forms, while preserving privacy of users to make document digitization workflows efficient.",
+		"techs": ['reactjs-icon.svg','reactjs-icon.svg','reactjs-icon.svg','reactjs-icon.svg',]
 	},
 	{
-		"title": "Project 2",
-		"imageSrc": "images/pic03.jpg",
-		"description": "Description for Project 2"
+		"title": "Sri-Doc",
+		"imageSrc": "images/picBio.png",
+		"description": "A comprehensive framework for extracting information from Sinhala documents such as forms, while preserving privacy of users to make document digitization workflows efficient.",
+		"techs": ['reactjs-icon.svg','reactjs-icon.svg','reactjs-icon.svg','reactjs-icon.svg',]
 	},
 	{
-		"title": "Project 3",
+		"title": "Sri-Doc",
 		"imageSrc": "images/picBio.png",
-		"description": "Description for Project 3"
-	}
+		"description": "A comprehensive framework for extracting information from Sinhala documents such as forms, while preserving privacy of users to make document digitization workflows efficient.",
+		"techs": ['reactjs-icon.svg','reactjs-icon.svg','reactjs-icon.svg','reactjs-icon.svg',]
+	},
   ];
   
 // Export the projects array using a function
