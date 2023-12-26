@@ -12,6 +12,32 @@ import projects from './projects.js';
 
 
 	//Projects
+
+	//dropDown
+	const workDropdown = document.querySelector('#nav ul li:nth-child(2) ul');
+	projects.forEach((project, index) => {
+	  const listItem = document.createElement('li');
+	  const anchor = document.createElement('a');
+	  anchor.setAttribute('href', `#${index + 1}`);
+	  anchor.textContent = project.title;
+	  listItem.appendChild(anchor);
+	  workDropdown.appendChild(listItem);
+	  if(index==(projects.length-1)){
+		const mobileApps = `
+			<a href="#">--Mobile Applications</a>
+			<ul>
+				<li><a href="#1">Sri-Doc</a></li>
+				<li><a href="#2">AMC Flashcard</a></li>
+				<li><a href="#11">AgriMart</a></li>
+			</ul>
+		`
+		const mobileAppListItem = document.createElement('li');
+		mobileAppListItem.innerHTML = mobileApps;
+		workDropdown.appendChild(mobileAppListItem);
+	  }
+	});
+
+
 	// Reference to the container where sections will be added
 	const projectsContainer = document.getElementById('projectsContainer');
 	// Loop through the projects array and create sections dynamically
@@ -40,7 +66,6 @@ import projects from './projects.js';
 			<h2>${project.title}</h2>
 			<p>${project.description}</p>
 			</header>
-			<p>Technologies: </p>
 			<div class="row gtr-uniform">
 				${techsContent}
 			</div>
