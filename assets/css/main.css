@@ -3161,14 +3161,58 @@ input, select, textarea {
 		.spotlight.style1 .content {
 			border-color: #e44c65;
 		}
-
 		.spotlight.style2 .content {
 			border-color: #5480f1;
 		}
-
 		.spotlight.style3 .content {
 			border-color: #39c088;
 		}
+		.spotlight.style3 .content {
+			border-color: #c440b0;
+		}
+		.spotlight.style4 .content {
+			border-color: #5d1313;
+		}
+		.spotlight.style5 .content {
+			border-color: #9339c0;
+		}
+		.spotlight.style6 .content {
+			border-color: #6f8314;
+		}
+		.spotlight.style7 .content {
+			border-color: #ff0000;
+		}
+		.spotlight.style8 .content {
+			border-color: #21be12;
+		}
+		.spotlight.style9 .content {
+			border-color: #21aac2;
+		}
+		.spotlight.style10 .content {
+			border-color: #357609;
+		}
+		.spotlight.style11 .content {
+			border-color: #c03974;
+		}
+		.spotlight.style12 .content {
+			border-color: #b9b000;
+		}
+		.spotlight.style13 .content {
+			border-color: #21010a;
+		}
+		.spotlight.style14 .content {
+			border-color: #5b4b97;
+		}
+		.spotlight.style15 .content {
+			border-color: #2b572a;
+		}
+		.spotlight.style16 .content {
+			border-color: #ff8989;
+		}
+		.spotlight.style17 .content {
+			border-color: #008c8e;
+		}
+
 
 		.spotlight.inactive .content {
 			opacity: 0;
