@@ -34,25 +34,25 @@ const Techs = {
 const projects = [
 	{
 		"title": "Sri-Doc",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/sridoc.png",
 		"description": "A comprehensive framework for extracting information from Sinhala documents such as forms, while preserving privacy of users to make document digitization workflows efficient.",
 		"techs": [Techs.tensorflow, Techs.pytorch, Techs.react, Techs.python, Techs.ts, Techs.mongoDB]
 	},
 	{
 		"title": "AMC flash-card mobile app",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/amc.png",
 		"description": "This application offers flashcards designed to aid Australian medical students preparing for the Australian Medical Council exam. Users can create bookmarks, customize their own study cards, and access a preset collection of study card packs.",
 		"techs": [Techs.flutter, Techs.dart, Techs.openAPI]
 	},
 	{
 		"title": "Work load management system (WAMS)",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/wams.png",
 		"description": "The main objective of WAMS was to provide a modeling platform for transparent planning, ongoing monitoring, and management of balanced Academic Workload delivery in accordance with agreed frameworks.",
 		"techs": [Techs.ts, Techs.react, Techs.docker, Techs.php, Techs.openAPI,]
 	},
 	{
 		"title": "Salon booking system",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/salonbooking.png",
 		"description": "This website facilitates online salon bookings in Australia. During that period, every intern at the company contributed to building this mock project.",
 		"techs": [Techs.react, Techs.firebase, Techs.mongoDB, Techs.nodeJS]
 	},
@@ -70,13 +70,13 @@ const projects = [
 	},
 	{
 		"title": "Personal legislative drafting website for a draftsman",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/legislative.png",
 		"description": "This project is designed for an individual draftsman specializing in legislative drafting. The website aims to attract clients seeking legislative drafting services.",
 		"techs": [Techs.react, Techs.mui]
 	},
 	{
 		"title": "Website for a investment firm",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/ijs.png",
 		"description": "This is an investment firm that is committed to investing and building innovative solutions for businesses.",
 		"techs": [Techs.react, Techs.nodeJS]
 	},
@@ -106,7 +106,7 @@ const projects = [
 	},
 	{
 		"title": "Human Resource Management System",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/hrms.png",
 		"description": "A web-based application where the employees of a company can keep their records on the platform, apply for leaves, the management can approve the requests, can query the reports under various categories.",
 		"techs": [Techs.mysql, Techs.bootstrap, Techs.react, Techs.nodeJS]
 	},
@@ -130,7 +130,7 @@ const projects = [
 	},
 	{
 		"title": "E-Pharmacy web Application",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/epharmacy.png",
 		"description": "A web-based application where the patients can upload their prescriptions to the system and then according to availability deliver the medicine to their doorstep.",
 		"techs": [Techs.react, Techs.firebase, Techs.bootstrap]
 	},
