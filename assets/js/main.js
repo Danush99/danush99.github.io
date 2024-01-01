@@ -47,6 +47,22 @@ import projects from './projects.js';
 		section.setAttribute('id', (index));
 		const styleType = `style${index}`
 		section.classList.add('spotlight', styleType, index % 2 === 0 ? 'right' : 'left');
+
+		// Separate the file name and extension
+		const filename = project.imageSrc;
+		let dotIndex = filename.lastIndexOf('.');
+		let fileNameWithoutExt = filename.substring(0, dotIndex);
+		let fileExt = filename.substring(dotIndex);
+	
+		// Add '2' before the file extension and combine the file name and extension
+		let mobileScreenFile = `${fileNameWithoutExt}2${fileExt}`;
+
+		let imagePath = project.imageSrc;
+
+		if (window.innerWidth < 980) {
+			imagePath = mobileScreenFile;
+		}
+
 	
 		// Create the content for the section
 		const imgClass = index % 2 === 0 ? '' : 'bottom'
@@ -60,7 +76,7 @@ import projects from './projects.js';
 			.join('');
 		
 		const content = `
-		<span class="image fit main ${imgClass}"><img src="${project.imageSrc}" alt="" /></span>
+		<span class="image fit main ${imgClass}"><img src="${imagePath}" alt="" /></span>
 		<div class="content">
 			<header>
 			<h2>${project.title}</h2>

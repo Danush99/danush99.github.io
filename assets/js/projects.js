@@ -58,13 +58,13 @@ const projects = [
 	},
 	{
 		"title": "SPA booking system",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/spa.png",
 		"description": "This project is designed for a Swedish spa, facilitating users to schedule massage appointments. Admins possess the capability to add massage services, announcements, and manage holidays, among other functions.",
 		"techs": [Techs.ts, Techs.react, Techs.mui]
 	},
 	{
 		"title": "AI resume builder",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/resume.png",
 		"description": "This website enables users to select a resume template and input the personal details required for the resume. The AI functionality on the website comes into play when users provide a paragraph of their biodata; the website recognizes and extracts relevant data for the sections based on the selected resume template.",
 		"techs": [Techs.react, Techs.nodeJS, Techs.mui, Techs.openAI]
 	},
@@ -82,25 +82,19 @@ const projects = [
 	},
 	{
 		"title": "Construction website",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/construction.png",
 		"description": "This is a website for a construction site that creates modern houses and luxury apartments to a high standard of architectural design under the observation of qualified Engineers. The website aims to attract clients seeking construction services.",
 		"techs": [Techs.react, Techs.nodeJS]
 	},
 	{
-		"title": "Website for real estate sellers",
-		"imageSrc": "images/picBio.png",
-		"description": "This website is for real estate sellers, providing them with the ability to generate social media captions and descriptions using AI for properties intended for sale.",
-		"techs": [Techs.react, Techs.nodeJS, Techs.openAI]
-	},
-	{
 		"title": "Agriculture Marketplace Dashboard",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/agrimart.png",
 		"description": "A web-based application and a mobile application. The web-based application is for the admins and officers and the mobile application is for farmers to sell their products in the marketplace and buyers can buy their products.",
 		"techs": [Techs.react, Techs.mongoDB, Techs.firebase, Techs.nodeJS]
 	},
 	{
 		"title": "News Website",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/news.png",
 		"description": "A web application where users can get updated with the latest news updates by subscribing, and reporters can update the website with the latest events by registering on the platform.",
 		"techs": [Techs.react, Techs.php, Techs.bootstrap, Techs.mysql, Techs.laravel,]
 	},
@@ -112,19 +106,19 @@ const projects = [
 	},
 	{
 		"title": "Driver Assistant System ",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/driver.png",
 		"description": "A python application that can take a real-time video stream as the input and identify the obstacles to warn the driver by predicting collisions.",
 		"techs": [Techs.python, Techs.openCV]
 	},
 	{
 		"title": "E-nstitute web Application ",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/enstitute.png",
 		"description": "Web application to establish a productive relationship between private teachers and students.",
 		"techs": [Techs.js, Techs.html, Techs.mysql]
 	},
 	{
 		"title": "Students Requests Management System",
-		"imageSrc": "images/picBio.png",
+		"imageSrc": "images/projects/studentRequest.png",
 		"description": "A web-based application where students can make requests under several categories such as deadline extensions, leaves, etc., and the academic staff can respond to the requests. A portal for real-time chatting was also included.",
 		"techs": [Techs.django, Techs.python, Techs.html, Techs.bootstrap]
 	},
