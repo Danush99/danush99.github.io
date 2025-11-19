@@ -29,9 +29,19 @@ const Techs = {
 	js: "javascript-icon.svg",
 	django: "djangoproject-icon.svg",
 	rea: "reactjs.svg",
+	ios: "ios-icon.svg",
+	swiftui: "swiftui-icon.svg",
+	apple: "apple-icon.svg",
 }
 
 const projects = [
+	{
+		"title": "Habit Ring",
+		"imageSrc": "images/projects/habitring.png",
+		"description": "A mobile application for tracking and building habits with a visual ring interface.",
+		"techs": [Techs.apple, Techs.ios, Techs.swiftui, Techs.firebase],
+		"privacyPolicyId": "privacyPolicy_habitRing.html"
+	},
 	{
 		"title": "Sri-Doc",
 		"imageSrc": "images/projects/sridoc.png",
@@ -127,7 +137,7 @@ const projects = [
 		"imageSrc": "images/projects/epharmacy.png",
 		"description": "A web-based application where the patients can upload their prescriptions to the system and then according to availability deliver the medicine to their doorstep.",
 		"techs": [Techs.react, Techs.firebase, Techs.bootstrap]
-	},
+	}
   ];
   
 // Export the projects array using a function

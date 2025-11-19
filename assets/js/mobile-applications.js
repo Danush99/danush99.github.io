@@ -1,116 +1,98 @@
 /*
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Mobile Applications Page
+	Filters and displays only mobile application projects
 */
 import projects from './projects.js';
-
 
 (function($) {
 	var	$window = $(window),
 		$body = $('body');
 
+	// Define which projects are mobile applications
+    const mobileAppTitles = [
+        "Habit Ring",
+        "Sri-Doc",
+        "AMC flash-card mobile app",
+        "Agriculture Marketplace Dashboard"
+    ];
 
-	//Projects
+	// Filter projects to only include mobile applications
+	// Filter out empty strings first, then match project titles
+	const mobileApps = projects.filter(project => {
+		const validTitles = mobileAppTitles.filter(title => title.trim() !== "");
+		return validTitles.includes(project.title);
+	});
 
-	//dropDown
-	const workDropdown = document.querySelector('#nav ul li:nth-child(2) ul');
-	if (workDropdown) {
-		projects.forEach((project, index) => {
-			const listItem = document.createElement('li');
-			const anchor = document.createElement('a');
-			anchor.setAttribute('href', `#${index + 1}`);
-			anchor.textContent = project.title;
-			listItem.appendChild(anchor);
-			workDropdown.appendChild(listItem);
-			if (index === (projects.length - 1)) {
-				const mobileApps = `
-					<a href="#">--Mobile Applications</a>
-					<ul>
-						<li><a href="#1">Sri-Doc</a></li>
-						<li><a href="#2">AMC Flashcard</a></li>
-						<li><a href="#11">AgriMart</a></li>
-					</ul>
-				`;
-				const mobileAppListItem = document.createElement('li');
-				mobileAppListItem.innerHTML = mobileApps;
-				workDropdown.appendChild(mobileAppListItem);
-			}
-		});
-	}
+	// Debug: Log the filtered results
+	console.log('Mobile App Titles:', mobileAppTitles);
+	console.log('Filtered Mobile Apps:', mobileApps);
 
 	// Reference to the container where sections will be added
 	const projectsContainer = document.getElementById('projectsContainer');
-	if (projectsContainer) {
-		// Loop through the projects array and create sections dynamically
-		projects.forEach((project, listIndex) => {
-			const index = listIndex + 1;
-			const section = document.createElement('section');
-			section.setAttribute('id', index);
-			const styleType = `style${index}`;
-			section.classList.add('spotlight', styleType, index % 2 === 0 ? 'right' : 'left');
+	
+	// Loop through the mobile apps array and create sections dynamically
+	mobileApps.forEach((project, listIndex) => {
+		const index = listIndex + 1
+		const section = document.createElement('section');
+		section.setAttribute('id', (index));
+		const styleType = `style${index}`
+		section.classList.add('spotlight', styleType, index % 2 === 0 ? 'right' : 'left');
 
-			// Separate the file name and extension
-			const filename = project.imageSrc;
-			let dotIndex = filename.lastIndexOf('.');
-			let fileNameWithoutExt = filename.substring(0, dotIndex);
-			let fileExt = filename.substring(dotIndex);
+		// Separate the file name and extension
+		const filename = project.imageSrc;
+		let dotIndex = filename.lastIndexOf('.');
+		let fileNameWithoutExt = filename.substring(0, dotIndex);
+		let fileExt = filename.substring(dotIndex);
+	
+		// Add '2' before the file extension and combine the file name and extension
+		let mobileScreenFile = `${fileNameWithoutExt}2${fileExt}`;
+
+		let imagePath = project.imageSrc;
+
+		if (window.innerWidth < 980) {
+			imagePath = mobileScreenFile;
+		}
+
+	
+		// Create the content for the section
+		const imgClass = index % 2 === 0 ? '' : 'bottom'
+
+		const techsContent = project.techs.map(tech => `
+			<section class="col-4 col-6-medium col-4-xsmall">
+				<span class="icon">
+					<img src="images/tech/${tech}" alt=""/>
+				</span>
+			</section>`)
+			.join('');
 		
-			// Add '2' before the file extension and combine the file name and extension
-			let mobileScreenFile = `${fileNameWithoutExt}2${fileExt}`;
-
-			let imagePath = project.imageSrc;
-
-			if (window.innerWidth < 980) {
-				imagePath = mobileScreenFile;
-			}
-
+		// Add privacy policy button if privacyPolicyId exists
+		const privacyButton = project.privacyPolicyId ? `
+			<ul class="actions" style="margin-top: 1.5em;">
+				<li><a href="privacyPolicies/${project.privacyPolicyId}" class="button" target="_blank">Privacy Policy</a></li>
+			</ul>
+		` : '';
 		
-			// Create the content for the section
-			const imgClass = index % 2 === 0 ? '' : 'bottom';
-
-			const techsContent = project.techs.map(tech => `
-				<section class="col-4 col-6-medium col-4-xsmall">
-					<span class="icon">
-						<img src="images/tech/${tech}" alt=""/>
-					</span>
-				</section>`)
-				.join('');
-			
-			// Add privacy policy button if privacyPolicyId exists
-			const privacyButton = project.privacyPolicyId ? `
-				<ul class="actions" style="margin-top: 1.5em;">
-					<li><a href="privacyPolicies/${project.privacyPolicyId}" class="button" target="_blank">Privacy Policy</a></li>
-				</ul>
-			` : '';
-			
-			const content = `
-			<span class="image fit main ${imgClass}"><img src="${imagePath}" alt="" /></span>
-			<div class="content">
-				<header>
-				<h2>${project.title}</h2>
-				<p>${project.description}</p>
-				</header>
-				<div class="row gtr-uniform">
-					${techsContent}
-				</div>
-				${privacyButton}
+		const content = `
+		<span class="image fit main ${imgClass}"><img src="${imagePath}" alt="" /></span>
+		<div class="content">
+			<header>
+			<h2>${project.title}</h2>
+			<p>${project.description}</p>
+			</header>
+			<div class="row gtr-uniform">
+				${techsContent}
 			</div>
-			<a href="#${index+1}" class="goto-next scrolly">Next</a>
-			`;
-		
-			// Set the content inside the section
-			section.innerHTML = content;
-		
-			// Append the section to the container
-			projectsContainer.appendChild(section);
-		});
-	}
-
-	const sendEmail = (formValue) => {
-		console.log('sending mail....')
-
-    };
+			${privacyButton}
+		</div>
+		<a href="#${index+1}" class="goto-next scrolly">Next</a>
+		`;
+	
+		// Set the content inside the section
+		section.innerHTML = content;
+	
+		// Append the section to the container
+		projectsContainer.appendChild(section);
+	});
 
 	// Breakpoints.
 		breakpoints({
@@ -379,3 +361,4 @@ import projects from './projects.js';
 		$banner
 			._parallax();
 })(jQuery);
+
