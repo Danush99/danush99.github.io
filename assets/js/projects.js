@@ -32,15 +32,28 @@ const Techs = {
 	ios: "ios-icon.svg",
 	swiftui: "swiftui-icon.svg",
 	apple: "apple-icon.svg",
+	cloudflare: "cloudflare.svg",
+	android: "android.svg",
 }
 
 const projects = [
 	{
+		"title": "Oshani Traders",
+		"imageSrc": "images/projects/oshaniTraders.png",
+		"description": "A mobile application for browsing and managing vehicle inventory with real-time notifications, price analysis, and admin management. Features topic-based push notifications, interactive price charts, and seamless vehicle browsing for pre-order, pre-owned, and unregistered vehicles.",
+		"techs": [Techs.flutter, Techs.dart, Techs.firebase, Techs.cloudflare, Techs.ios, Techs.android],
+		"privacyPolicyId": "privacyPolicy_oshaniTraders.html",
+		"appStoreUrl": "https://apps.apple.com/app/habitring/id6764103398",
+		"googlePlayUrl": "https://play.google.com/store/apps/details?id=com.danusha.habitring",
+		"websiteUrl": "https://habitring.com"
+	},
+	{
 		"title": "Habit Ring",
 		"imageSrc": "images/projects/habitring.png",
 		"description": "A mobile application for tracking and building habits with a visual ring interface.",
-		"techs": [Techs.apple, Techs.ios, Techs.swiftui, Techs.firebase],
-		"privacyPolicyId": "privacyPolicy_habitRing.html"
+		"techs": [Techs.apple, Techs.ios, Techs.swiftui, Techs.firebase, Techs.cloudflare],
+		"privacyPolicyId": "privacyPolicy_habitRing.html",
+		"appStoreUrl": "https://apps.apple.com/lk/app/habit-ring/id6753904872"
 	},
 	{
 		"title": "Sri-Doc",

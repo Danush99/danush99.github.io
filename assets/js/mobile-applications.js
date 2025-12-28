@@ -65,12 +65,54 @@ import projects from './projects.js';
 			</section>`)
 			.join('');
 		
-		// Add privacy policy button if privacyPolicyId exists
-		const privacyButton = project.privacyPolicyId ? `
-			<ul class="actions" style="margin-top: 1.5em;">
-				<li><a href="privacyPolicies/${project.privacyPolicyId}" class="button" target="_blank">Privacy Policy</a></li>
-			</ul>
-		` : '';
+		// Create all buttons in a single row - reduced sizes
+		const allButtons = [];
+		if (project.appStoreUrl) {
+			allButtons.push(`
+				<li style="padding: 0 !important; margin-right: 1.5em; display: flex; align-items: center;">
+					<a href="${project.appStoreUrl}" target="_blank" rel="noopener noreferrer" style="display: block; text-decoration: none !important; border-bottom: none !important; outline: none;">
+						<img src="images/buttonsSvg/appStoreButton.svg" alt="App Store" style="width: 80px; height: 80px; display: block;" />
+					</a>
+				</li>
+			`);
+		}
+		if (project.googlePlayUrl) {
+			allButtons.push(`
+				<li style="padding: 0 !important; margin-right: 1.5em; display: flex; align-items: center;">
+					<a href="${project.googlePlayUrl}" target="_blank" rel="noopener noreferrer" style="display: block; text-decoration: none !important; border-bottom: none !important; outline: none;">
+						<img src="images/buttonsSvg/playStoreButton.svg" alt="Google Play" style="width: 80px; height: 80px; display: block;" />
+					</a>
+				</li>
+			`);
+		}
+		if (project.websiteUrl) {
+			allButtons.push(`
+				<li style="padding: 0 !important; margin-right: 1.5em; display: flex; align-items: center;">
+					<a href="${project.websiteUrl}" target="_blank" rel="noopener noreferrer" style="display: block; text-decoration: none !important; border-bottom: none !important; outline: none;">
+						<img src="images/buttonsSvg/webButton.svg" alt="Website" style="width: 40px; height: 40px; display: block;" />
+					</a>
+				</li>
+			`);
+		}
+		if (project.privacyPolicyId) {
+			allButtons.push(`
+				<li style="padding: 0 !important; margin-right: 0; display: flex; align-items: center;">
+					<a href="privacyPolicies/${project.privacyPolicyId}" class="button" target="_blank" style="padding: 0.15em 0.35em; font-size: 0.6em; display: inline-flex; align-items: center; justify-content: center; text-align: center; line-height: 1.2;">Privacy Policy</a>
+				</li>
+			`);
+		}
+		
+		// Combine all buttons in a single row
+		let buttonsHTML = '';
+		if (allButtons.length > 0) {
+			buttonsHTML = `
+			<div style="margin-top: 1.5em;">
+				<ul class="actions" style="margin: 0 !important; list-style: none; padding: 0 !important; display: flex; align-items: center; flex-wrap: nowrap; justify-content: flex-start;">
+					${allButtons.join('')}
+				</ul>
+			</div>
+			`;
+		}
 		
 		const content = `
 		<span class="image fit main ${imgClass}"><img src="${imagePath}" alt="" /></span>
@@ -82,7 +124,7 @@ import projects from './projects.js';
 			<div class="row gtr-uniform">
 				${techsContent}
 			</div>
-			${privacyButton}
+			${buttonsHTML}
 		</div>
 		<a href="#${index+1}" class="goto-next scrolly">Next</a>
 		`;
