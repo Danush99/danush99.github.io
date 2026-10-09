@@ -38,6 +38,15 @@ const Techs = {
 
 const projects = [
 	{
+		"title": "Ceylon Rails",
+		"imageSrc": "images/projects/ceylonRails.JPEG",
+		"mobileImageSrc": "images/projects/ceylonRails.JPEG",
+		"description": "Ceylon Rails is a SwiftUI app for planning train journeys across Sri Lanka. Search timetables between stations, explore stop-by-stop schedules, and save trains to follow reported live positions and delays—all in a clean, customizable interface.",
+		"techs": [Techs.apple, Techs.ios, Techs.swiftui],
+		"privacyPolicyId": "privacyPolicy_ceylonRails.html",
+		"appStoreUrl": "https://apps.apple.com/app/ceylon-rails/id6820872363"
+	},
+	{
 		"title": "Oshani Traders",
 		"imageSrc": "images/projects/oshaniTraders.png",
 		"mobileImageSrc": "images/projects/oshaniTraders.png",
@@ -54,15 +63,6 @@ const projects = [
 		"techs": [Techs.apple, Techs.ios, Techs.swiftui, Techs.firebase, Techs.cloudflare],
 		"privacyPolicyId": "privacyPolicy_habitRing.html",
 		"appStoreUrl": "https://apps.apple.com/lk/app/habit-ring/id6753904872"
-	},
-	{
-		"title": "Ceylon Rails",
-		"imageSrc": "images/projects/ceylonRails.JPEG",
-		"mobileImageSrc": "images/projects/ceylonRails.JPEG",
-		"description": "Ceylon Rails is a SwiftUI app for planning train journeys across Sri Lanka. Search timetables between stations, explore stop-by-stop schedules, and save trains to follow reported live positions and delays—all in a clean, customizable interface.",
-		"techs": [Techs.apple, Techs.ios, Techs.swiftui],
-		"privacyPolicyId": "privacyPolicy_ceylonRails.html",
-		"appStoreUrl": "https://apps.apple.com/app/ceylon-rails/id6820872363"
 	},
 	{
 		"title": "Sri-Doc",
