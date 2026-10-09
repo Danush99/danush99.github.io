@@ -43,7 +43,8 @@ const projects = [
 		"mobileImageSrc": "images/projects/oshaniTraders.png",
 		"description": "A mobile application for browsing and managing vehicle inventory with real-time notifications, price analysis, and admin management. Features topic-based push notifications, interactive price charts, and seamless vehicle browsing for pre-order, pre-owned, and unregistered vehicles.",
 		"techs": [Techs.flutter, Techs.dart, Techs.firebase, Techs.cloudflare, Techs.ios, Techs.android],
-		"privacyPolicyId": "privacyPolicy_oshaniTraders.html"
+		"privacyPolicyId": "privacyPolicy_oshaniTraders.html",
+		"appStoreUrl": "https://apps.apple.com/app/oshani-traders/id6757016152"
 	},
 	{
 		"title": "Habit Ring",
@@ -60,7 +61,8 @@ const projects = [
 		"mobileImageSrc": "images/projects/ceylonRails.JPEG",
 		"description": "Ceylon Rails is a SwiftUI app for planning train journeys across Sri Lanka. Search timetables between stations, explore stop-by-stop schedules, and save trains to follow reported live positions and delays—all in a clean, customizable interface.",
 		"techs": [Techs.apple, Techs.ios, Techs.swiftui],
-		"privacyPolicyId": "privacyPolicy_ceylonRails.html"
+		"privacyPolicyId": "privacyPolicy_ceylonRails.html",
+		"appStoreUrl": "https://apps.apple.com/app/ceylon-rails/id6820872363"
 	},
 	{
 		"title": "Sri-Doc",
