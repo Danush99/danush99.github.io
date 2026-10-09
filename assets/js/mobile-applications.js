@@ -10,6 +10,8 @@ import projects from './projects.js';
 
 	// Define which projects are mobile applications
     const mobileAppTitles = [
+        "Ceylon Rails",
+        "Oshani Traders",
         "Habit Ring",
         "Sri-Doc",
         "AMC flash-card mobile app",
@@ -18,10 +20,9 @@ import projects from './projects.js';
 
 	// Filter projects to only include mobile applications
 	// Filter out empty strings first, then match project titles
-	const mobileApps = projects.filter(project => {
-		const validTitles = mobileAppTitles.filter(title => title.trim() !== "");
-		return validTitles.includes(project.title);
-	});
+	const mobileApps = mobileAppTitles
+		.map(title => projects.find(project => project.title === title))
+		.filter(project => project !== undefined);
 
 	// Debug: Log the filtered results
 	console.log('Mobile App Titles:', mobileAppTitles);
@@ -50,7 +51,7 @@ import projects from './projects.js';
 		let imagePath = project.imageSrc;
 
 		if (window.innerWidth < 980) {
-			imagePath = mobileScreenFile;
+			imagePath = project.mobileImageSrc || mobileScreenFile;
 		}
 
 	
@@ -403,4 +404,3 @@ import projects from './projects.js';
 		$banner
 			._parallax();
 })(jQuery);
-

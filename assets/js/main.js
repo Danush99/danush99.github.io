@@ -62,7 +62,7 @@ import projects from './projects.js';
 			let imagePath = project.imageSrc;
 
 			if (window.innerWidth < 980) {
-				imagePath = mobileScreenFile;
+				imagePath = project.mobileImageSrc || mobileScreenFile;
 			}
 
 		

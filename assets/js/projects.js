@@ -40,20 +40,27 @@ const projects = [
 	{
 		"title": "Oshani Traders",
 		"imageSrc": "images/projects/oshaniTraders.png",
+		"mobileImageSrc": "images/projects/oshaniTraders.png",
 		"description": "A mobile application for browsing and managing vehicle inventory with real-time notifications, price analysis, and admin management. Features topic-based push notifications, interactive price charts, and seamless vehicle browsing for pre-order, pre-owned, and unregistered vehicles.",
 		"techs": [Techs.flutter, Techs.dart, Techs.firebase, Techs.cloudflare, Techs.ios, Techs.android],
-		"privacyPolicyId": "privacyPolicy_oshaniTraders.html",
-		"appStoreUrl": "https://apps.apple.com/app/habitring/id6764103398",
-		"googlePlayUrl": "https://play.google.com/store/apps/details?id=com.danusha.habitring",
-		"websiteUrl": "https://habitring.com"
+		"privacyPolicyId": "privacyPolicy_oshaniTraders.html"
 	},
 	{
 		"title": "Habit Ring",
 		"imageSrc": "images/projects/habitring.png",
+		"mobileImageSrc": "images/projects/habitring.png",
 		"description": "A mobile application for tracking and building habits with a visual ring interface.",
 		"techs": [Techs.apple, Techs.ios, Techs.swiftui, Techs.firebase, Techs.cloudflare],
 		"privacyPolicyId": "privacyPolicy_habitRing.html",
 		"appStoreUrl": "https://apps.apple.com/lk/app/habit-ring/id6753904872"
+	},
+	{
+		"title": "Ceylon Rails",
+		"imageSrc": "images/projects/ceylonRails.JPEG",
+		"mobileImageSrc": "images/projects/ceylonRails.JPEG",
+		"description": "Ceylon Rails is a SwiftUI app for planning train journeys across Sri Lanka. Search timetables between stations, explore stop-by-stop schedules, and save trains to follow reported live positions and delays—all in a clean, customizable interface.",
+		"techs": [Techs.apple, Techs.ios, Techs.swiftui],
+		"privacyPolicyId": "privacyPolicy_ceylonRails.html"
 	},
 	{
 		"title": "Sri-Doc",
