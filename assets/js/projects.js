@@ -38,6 +38,14 @@ const Techs = {
 
 const projects = [
 	{
+		"title": "Split Hex",
+		"imageSrc": "images/projects/splitHex.jpg",
+		"mobileImageSrc": "images/projects/splitHex.jpg",
+		"description": "Split Hex is a React Native app for sharing expenses and planning a budget. Split bills with friends, trips and housemates in any currency, see who owes whom and settle up in the fewest payments, then set a budget that counts only your real share of every shared cost.",
+		"techs": [Techs.react, Techs.ts, Techs.firebase, Techs.cloudflare, Techs.ios],
+		"privacyPolicyId": "privacyPolicy_splitHex.html"
+	},
+	{
 		"title": "Ceylon Rails",
 		"imageSrc": "images/projects/ceylonRails.JPEG",
 		"mobileImageSrc": "images/projects/ceylonRails.JPEG",

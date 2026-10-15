@@ -10,6 +10,7 @@ import projects from './projects.js';
 
 	// Define which projects are mobile applications
     const mobileAppTitles = [
+        "Split Hex",
         "Ceylon Rails",
         "Oshani Traders",
         "Habit Ring",
