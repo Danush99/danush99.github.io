@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join a group on Split Hex</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --bg: #F3F4FB; --card: #FFFFFF; --text: #14172B; --muted: #596080; --a: #FFC24B; --b: #FF8A65; --c: #FF5C7A; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #05060F; --card: #11131F; --text: #F4F5FF; --muted: #9BA4C9; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; background: var(--bg); color: var(--text);
+         font: 17px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { width: 100%; max-width: 420px; background: var(--card); border-radius: 28px; padding: 32px 24px; text-align: center;
+         box-shadow: 0 12px 40px rgba(0,0,0,.12); }
+  .hex { width: 72px; height: 72px; margin: 0 auto 16px; }
+  h1 { font-size: 24px; line-height: 1.25; margin: 0 0 8px; }
+  p { margin: 0 0 24px; color: var(--muted); }
+  a.button { display: block; padding: 16px; border-radius: 18px; font-weight: 700; text-decoration: none; margin-top: 12px; }
+  a.primary { background: linear-gradient(90deg, var(--a), var(--b), var(--c)); color: #1B1320; }
+  a.secondary { border: 1px solid rgba(127,127,160,.35); color: var(--text); }
+  small { display: block; margin-top: 20px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <svg class="hex" viewBox="0 0 100 100" aria-hidden="true">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFC24B"/><stop offset="1" stop-color="#FF5C7A"/></linearGradient></defs>
+    <path d="M50 4 90 27v46L50 96 10 73V27z" fill="url(#g)"/>
+    <path d="M57 18 40 82" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  </svg>
+  <h1 id="title">You're invited to a group on Split Hex</h1>
+  <p id="body">Split Hex keeps track of who paid what, so everyone knows who owes whom.</p>
+  <a id="open" class="button primary" href="#">Open in Split Hex</a>
+  <a id="store" class="button secondary" href="https://apps.apple.com/app/id6821606282">Get Split Hex</a>
+  <small id="note">Already have the app? Tap "Open in Split Hex". New to it? Get it, sign in, then tap this link again.</small>
+</main>
+<script>
+  (function () {
+    var token = new URLSearchParams(location.search).get('t') || '';
+    var valid = /^[0-9a-f]{32}$/.test(token);
+    var android = /Android/i.test(navigator.userAgent);
+    var play = 'https://play.google.com/store/apps/details?id=com.dan.settlesync';
+    var appStore = 'https://apps.apple.com/app/id6821606282';
+    var store = document.getElementById('store');
+    store.href = android ? play : appStore;
+    store.textContent = android ? 'Get Split Hex on Google Play' : 'Get Split Hex on the App Store';
+    var open = document.getElementById('open');
+    if (!valid) {
+      document.getElementById('title').textContent = 'This invite link is not complete';
+      document.getElementById('body').textContent = 'Ask the person who sent it for the link again.';
+      open.style.display = 'none';
+      document.getElementById('note').style.display = 'none';
+      return;
+    }
+    // Android opens the app through an intent, and falls back to Google Play by itself.
+    var app = android
+      ? 'intent://join/' + token + '#Intent;scheme=splithex;package=com.dan.settlesync;S.browser_fallback_url=' + encodeURIComponent(play) + ';end'
+      : 'splithex://join/' + token;
+    open.href = app;
+    // Straight into the app when it is installed; the buttons stay for when it is not.
+    setTimeout(function () { location.href = app; }, 300);
+  })();
+</script>
+</body>
+</html>
