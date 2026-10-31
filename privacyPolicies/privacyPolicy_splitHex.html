@@ -34,7 +34,7 @@
 				<div class="container">
 					<header class="major">
 						<h2>Privacy Policy for Split Hex</h2>
-						<p>Last Updated: 22/10/2026</p>
+						<p>Last Updated: 31/10/2026</p>
 					</header>
 
 					<section>
@@ -93,6 +93,10 @@
 						<p>Each message is read on your phone. From a card payment, or from money coming in if you choose to add it, the App keeps only the amount, the currency, the shop or sender's name and the date, and sends only those to our server, where they become a personal expense or an income record in your account. The text of your messages is never stored or sent. Messages that are not bank transactions, such as conversations and verification codes, are ignored. If you limit the feature to some of your cards, the 4 digits you enter for each card stay on your phone.</p>
 						<p>A short list of the transactions added today, and the reason and time of the last message that was skipped, are kept only on your phone. You can turn the feature off at any time in Settings &gt; Automatic expenses (on Android you can also remove the permission in your phone's settings). Expenses and income already added stay until you delete them.</p>
 
+						<h4>8. How the App Is Used (Analytics)</h4>
+						<p>We use Google Analytics for Firebase to learn which features people use most, so we can improve the App. The App sends which screens are opened and which kind of action was taken (for example, that an expense was added, a group was created or a tutorial was finished, and which theme or tutorial was chosen), together with the App version, device model, operating system, language and approximate country.</p>
+						<p>It never sends the names, amounts, notes or receipts of your expenses, incomes or payments, the text of any message, your name, @userID, email address or phone number. Google gives the App an analytics identifier to count use over time; it is not linked to your Split Hex account, it is not used to track you across other companies' apps and websites, and the advertising identifier is not collected for analytics. See <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
+
 						<h3>How We Use Your Information</h3>
 						<ul>
 							<li>To create your account and let you sign in</li>
@@ -103,6 +107,7 @@
 							<li>To add expenses and income from your bank's text messages, if you turn on Automatic expenses</li>
 							<li>To send notifications and verification codes</li>
 							<li>To show ads in the free version, and to remove them for Premium subscribers</li>
+							<li>To understand which features are used, so we can improve the App</li>
 						</ul>
 						<p>We do not sell your personal information.</p>
 
@@ -113,12 +118,36 @@
 						<p>We use these services to run the App. Each handles data only to provide its service:</p>
 						<ul>
 							<li><strong>Apple</strong>: Sign in with Apple, push notifications and in-app purchases</li>
-							<li><strong>Google Firebase</strong>: sign-in (Google and phone number), push notifications and app settings</li>
+							<li><strong>Google Firebase</strong>: sign-in (Google and phone number), push notifications, app settings and usage analytics (Google Analytics for Firebase)</li>
 							<li><strong>Cloudflare</strong>: hosting of our server, database and stored pictures, and sending verification emails</li>
 							<li><strong>Brevo</strong>: sending verification emails</li>
+							<li><strong>Apple iCloud Keychain</strong> and <strong>Google Block Store</strong>: keeping a copy of your encryption key, end-to-end encrypted, as described under End-to-End Encryption</li>
 							<li><strong>Green-API</strong>: looking up the WhatsApp profile picture for a WhatsApp number you link</li>
 							<li><strong>Unity Ads</strong>: ads in the free version</li>
 						</ul>
+
+						<h3>End-to-End Encryption</h3>
+						<p>Every Split Hex account uses end-to-end encryption for some of your data. That data is encrypted on your phone before it is sent, with a key that we do not have. We cannot read it, and neither can anyone who reads our database. There is nothing to turn on.</p>
+						<p><strong>End-to-end encrypted, for expenses and records that are only yours:</strong></p>
+						<ul>
+							<li>The names, amounts and notes of your personal expenses, and receipt photos on them</li>
+							<li>Your salary and other incomes: their names and amounts</li>
+							<li>Money in that you note by hand or that comes from bank messages: its name and amount</li>
+							<li>The amounts of your spending goals, and of your savings and investment targets</li>
+							<li>The names and amounts of your recurring payments, and the words used to match them to bank messages</li>
+						</ul>
+						<p><strong>Not end-to-end encrypted.</strong> These are protected in transit and access is limited as described below, but they are readable on our server and by anyone with access to our database:</p>
+						<ul>
+							<li>The currencies, dates and categories of all expenses, including your personal expenses, and how many there are</li>
+							<li>Whether a savings target is a share of your income, and the percentage</li>
+							<li>Group expenses and expenses shared with friends: their names, notes, receipts and amounts, because the people on them need to read them</li>
+							<li>Your groups and their members, friends, categories and payments between people</li>
+							<li>Your account details: name, @userID, emails, phone number and profile picture</li>
+							<li>When records were added, and how many there are</li>
+						</ul>
+						<p><strong>Your key.</strong> Your key is made on your phone. On an iPhone it is kept in iCloud Keychain, so your other iPhones and iPads and a new iPhone signed in to your Apple Account can open your data, if iCloud Keychain is on. On Android it is kept on your phone and backed up with Google's Block Store, which you can turn off in Settings &gt; Privacy and security. The backup is end-to-end encrypted with your phone's screen lock, and it comes back only when a new phone is set up from your old phone's Google backup, or copied directly from it. Without a screen lock, the key moves only in a direct copy.</p>
+						<p><strong>If your key is lost.</strong> There is no recovery code, and we cannot recover your key or your encrypted data. If none of your phones has the key and it cannot come back as described above (for example, you lost your phone with no backup, set up a new Android phone without restoring, or moved between iPhone and Android), your encrypted data cannot be opened again. You can start over with a new key: your encrypted data stays locked for good, including what your personal expenses cost and the spending totals built from them. What is not end-to-end encrypted stays available.</p>
+						<p><strong>Merging accounts.</strong> An account can be merged into yours only on a phone that has the keys of both accounts. Otherwise the merge is stopped and nothing moves.</p>
 
 						<h3>Data Storage and Security</h3>
 						<p>Your data is stored on Cloudflare's infrastructure and sent over encrypted connections (HTTPS). Access to the database is limited to the App's server. No method of storage or transmission is completely secure, but we work to protect your information.</p>
