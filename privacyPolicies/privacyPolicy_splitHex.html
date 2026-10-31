@@ -90,7 +90,7 @@
 							<li><strong>Android:</strong> the App asks for permission to receive text messages. It sees only messages that arrive while the feature is on, and it cannot read the messages already on your phone.</li>
 							<li><strong>iPhone:</strong> a Shortcuts automation that you set up passes each new message to the App.</li>
 						</ul>
-						<p>Each message is read on your phone. From a card payment, or from money coming in if you choose to add it, the App keeps only the amount, the currency, the shop or sender's name and the date, and sends only those to our server, where they become a personal expense or an income record in your account. The text of your messages is never stored or sent. Messages that are not bank transactions, such as conversations and verification codes, are ignored. If you limit the feature to some of your cards, the 4 digits you enter for each card stay on your phone.</p>
+						<p>Each message is read on your phone. From a card payment, or from money coming in if you choose to add it, the App keeps only the amount, the currency, the shop or sender's name and the date, and sends only those to our server (with the kind of transaction, the category chosen for it and, when it confirms a salary or a recurring payment, which one), where they become a personal expense or an income record in your account. The text of your messages is never stored or sent. Messages that are not bank transactions, such as conversations and verification codes, are ignored. If you limit the feature to some of your cards, the 4 digits you enter for each card stay on your phone.</p>
 						<p>A short list of the transactions added today, and the reason and time of the last message that was skipped, are kept only on your phone. You can turn the feature off at any time in Settings &gt; Automatic expenses (on Android you can also remove the permission in your phone's settings). Expenses and income already added stay until you delete them.</p>
 
 						<h4>8. How the App Is Used (Analytics)</h4>
@@ -127,11 +127,11 @@
 						</ul>
 
 						<h3>End-to-End Encryption</h3>
-						<p>Every Split Hex account uses end-to-end encryption for some of your data. That data is encrypted on your phone before it is sent, with a key that we do not have. We cannot read it, and neither can anyone who reads our database. There is nothing to turn on.</p>
+						<p>Every Split Hex account uses end-to-end encryption for some of your data. That data is encrypted on your phone before it is sent, with a key that we do not have. We cannot read it, and neither can anyone who reads our database. There is nothing to turn on: a new account is encrypted from the start, and an account created with an earlier version of the App is encrypted the first time it is opened in this version (until then, its data is stored as described for the earlier version).</p>
 						<p><strong>End-to-end encrypted, for expenses and records that are only yours:</strong></p>
 						<ul>
 							<li>The names, amounts and notes of your personal expenses, and receipt photos on them</li>
-							<li>Your salary and other incomes: their names and amounts</li>
+							<li>Your salary and other incomes: their names and amounts, and the words used to match them to bank messages</li>
 							<li>Money in that you note by hand or that comes from bank messages: its name and amount</li>
 							<li>The amounts of your spending goals, and of your savings and investment targets</li>
 							<li>The names and amounts of your recurring payments, and the words used to match them to bank messages</li>
@@ -140,6 +140,10 @@
 						<ul>
 							<li>The currencies, dates and categories of all expenses, including your personal expenses, and how many there are</li>
 							<li>Whether a savings target is a share of your income, and the percentage</li>
+							<li>Your budget settings (currency and cycle dates), and the schedules of recurring payments and incomes: how often, the next date, and whether one is waiting for or was confirmed by a bank message</li>
+							<li>Whether an expense or income was added by hand, from a bank message or by a recurring payment, and the exchange rate used for one in another currency</li>
+							<li>Which budget alerts you have seen or dismissed, which can show roughly how far a goal was exceeded or how much of your income you saved (in steps of 10%)</li>
+							<li>The size of encrypted receipt photos, and the amount range of a search</li>
 							<li>Group expenses and expenses shared with friends: their names, notes, receipts and amounts, because the people on them need to read them</li>
 							<li>Your groups and their members, friends, categories and payments between people</li>
 							<li>Your account details: name, @userID, emails, phone number and profile picture</li>
